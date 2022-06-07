@@ -1,0 +1,135 @@
+body, button, dialog, input, select {
+  font-family: 'Trebuchet MS', sans-serif;
+}
+
+body {
+  width: 1200px;
+  margin: 0 auto;
+  padding: 2vw;
+}
+
+/* formulaires
+   =========== */
+
+form[name="addTaskForm"] {
+  display: flex;
+  align-items: flex-start;
+}
+
+label, input, select, button {
+  display: inline-block;
+  box-sizing: border-box;
+  margin: 0 10px 10px 0;
+}
+
+label {
+  width: 10vw;
+}
+
+input, select, button {
+  padding: 8px;
+  width: 400px;
+  font-size: 16px;
+}
+
+select, button {
+  width: 150px;
+}
+
+.elSelectSort {
+  margin-top: 20px;
+}
+
+[name="elSelectSort"] {
+  width: 200px;
+}
+
+.tasksForm {
+  position: relative;
+  margin-top: 50px;
+}
+
+#msgErr {
+  color: brown;
+  position: absolute;
+  top: -30px;
+  left: 0;
+}
+
+/* liste des tâches
+   ================ */
+
+.tasks-list {
+  margin-top: 10px;
+  display: grid;
+  grid-template-columns: minmax(700px, max-content) max-content;
+  grid-gap: 3px;
+}
+
+.task {
+  display: contents;
+  cursor: pointer;
+}
+
+.task:nth-of-type(odd) .task-info, .task:nth-of-type(odd) .task-actions {
+  background-color: #eee;
+}
+
+.task:nth-of-type(even) .task-info, .task:nth-of-type(even) .task-actions{
+  background-color: #ddd;
+}
+
+.task-info {
+  display: flex;
+  justify-content: space-between;
+}
+
+.task-info, .task-actions {
+  box-sizing: border-box;
+  padding: 5px 20px;
+  line-height: 32px;
+  border-radius: 3px;
+}
+
+.task-description {
+  color: #777;
+}
+
+[data-task-status='true'] {
+  text-decoration: line-through;
+  color: #aaa;
+}
+
+.show-task-details, .delete-task {
+  color: #777;
+  text-decoration: underline;
+}
+
+.show-task-details:hover, .delete-task:hover {
+  color: #000;
+}
+
+/* fenêtre modale
+   ============== */
+
+#modale-details {
+  min-width: 300px;
+  border: none;
+  border-radius: 5px;
+  box-shadow: 0 0 8px #777;
+}
+
+#modale-details h2 {
+  margin-bottom: 30px;
+  text-align: center;
+}
+
+#modale-details span {
+  color: cornflowerblue;
+  font-weight: bold;
+}
+
+#modale-details button {
+  display: block;
+  margin: 30px auto 10px;
+}
