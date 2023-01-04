@@ -3,10 +3,10 @@
 	
 	function connectDB() {
 
-		define("SERVER", "localhost");
-		define("USERNAME", "root"); //("USERNAME", "e2195318");
-		define("PASSWORD", "root"); //("PASSWORD", "IUrGPqcQ7tkvGcgx2Dzc");
-		define("DBNAME", "to-do-list"); //("DBNAME", "e2195318");
+		define("SERVER", "us-cdbr-east-06.cleardb.net"); //("SERVER", "localhost");
+		define("USERNAME", "b77598fe4cc1c5"); //("USERNAME", "root"); //("USERNAME", "e2195318");
+		define("PASSWORD", "b6dd49d4"); //("PASSWORD", "root"); //("PASSWORD", "IUrGPqcQ7tkvGcgx2Dzc");
+		define("DBNAME", "heroku_7f27a992a03a54f"); //("DBNAME", "to-do-list"); //("DBNAME", "e2195318");
 
 		$laConnexion = mysqli_connect(SERVER, USERNAME, PASSWORD, DBNAME);
 				
